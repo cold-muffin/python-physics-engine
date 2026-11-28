@@ -12,9 +12,9 @@ class Particle:
     accel: Vector | None = None,
     mass: Scalar | None = None
   ):
-    self.pos = np.zeros(2) if pos is None else pos
-    self.vel = np.zeros(2) if vel is None else vel
-    self.accel = np.zeros(2) if accel is None else accel
+    self.pos = np.zeros(2) if pos is None else np.array(pos, dtype=np.float64)
+    self.vel = np.zeros(2) if vel is None else np.array(vel, dtype=np.float64)
+    self.accel = np.zeros(2) if accel is None else np.array(accel, dtype=np.float64)
     self.mass = np.float64(0) if mass is None else np.float64(mass)
 
     self.app_force = np.zeros(2)
